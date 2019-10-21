@@ -21,8 +21,6 @@ const ArrayList = function() {
 
 };
 
-
-
 ArrayList.prototype.clear = function() {
     this._size = 0;
     this._array = [];
@@ -86,7 +84,7 @@ ArrayList.prototype.shift = function(value) {
   }
 };
 
-ArrayList.prototype.toSlice = function (value) {
+ArrayList.prototype.slice = function (value) {
     this._array = value;
     tempArray = [];
     for(let i = 0; i < this._array.length - 2; i++){
@@ -95,7 +93,7 @@ ArrayList.prototype.toSlice = function (value) {
     return tempArray;
 };
 
-ArrayList.prototype.toSplice = function (value) {
+ArrayList.prototype.splice = function (value) {
     this._array = value;
     let tempAr = [];
     let element = (this._array[0], this._array[1]);
@@ -109,7 +107,7 @@ ArrayList.prototype.toSplice = function (value) {
     }  
 };
 
-ArrayList.prototype.toSort = function(value) {
+ArrayList.prototype.sort = function(value) {
     this._array = value;
     let temp = [];
     
@@ -125,6 +123,5 @@ ArrayList.prototype.toSort = function(value) {
     
     return this._array;
 };
-
 
 module.exports = ArrayList;
